@@ -74,20 +74,15 @@ Copy/paste this URL into your browser when you connect for the first time,
 
 ## Object Detection Install
 
-cd mnt/data/
-git clone https://github.com/tensorflow/tensorflow
-cd mnt/data/tensorflow
-git clone https://github.com/tensorflow/models
-
-cd mnt/data/
-git clone https://github.com/cocodataset/cocoapi.git
-
-exec container
-
-cd /notebooks/cocoapi/PythonAPI
-make
-cp -r pycocotools /notebooks/tensorflow/models
-
-cd /notebooks/tensorflow/models/research
-protoc object_detection/protos/*.proto --python_out=.
-
+1. `cd mnt/data/`
+2. `git clone https://github.com/tensorflow/tensorflow`
+3. `cd mnt/data/tensorflow`
+4. `git clone https://github.com/tensorflow/models`
+5. `cd mnt/data/`
+6. `git clone https://github.com/cocodataset/cocoapi.git`
+7. exec container
+8. `cd /notebooks/cocoapi/PythonAPI`
+9. `make`
+10. `cp -r pycocotools /notebooks/tensorflow/models`
+11. `cd /notebooks/tensorflow/models/research`
+12. `protoc object_detection/protos/*.proto --python_out=.`
