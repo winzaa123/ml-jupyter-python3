@@ -74,7 +74,7 @@ EXPOSE 8888
 EXPOSE 6006
 
 ENV PYTHONPATH=/usr/local/bin/python3.7:/notebooks/tensorflow/models/research/:/notebooks/tensorflow/models/research/slim
-# after clone git
+# ENV after clone git tensorflow and model for python build model
 VOLUME /notebooks
 
 # Run Jupyter Notebook
