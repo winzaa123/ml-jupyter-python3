@@ -14,7 +14,9 @@ RUN apt-get update && apt-get install -y \
     libmecab-dev \
 	gfortran \
     libav-tools \
-    python3-setuptools
+    python3-setuptools \
+    protobuf-compiler python-pil python-lxml python-tk 
+    # install object detection
 
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -44,6 +46,8 @@ RUN pip --no-cache-dir install \
         h5py \
         google-api-python-client \
         tornado==5.1.1 \
+        Cython contextlib2 \
+	    # object detection
         && \
     python -m ipykernel.kernelspec
 

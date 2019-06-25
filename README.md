@@ -65,10 +65,29 @@ This container is CPU Only.If you want to use GPU, rebuilding GPU images require
 
 
 ## 3. How To Use Jupyter Notebooks
+
 Copy/paste this URL into your browser when you connect for the first time,
 
 
     to login with a token:
         http://localhost:8888/?token=<your token>
 
+## Object Detection Install
+
+cd mnt/data/
+git clone https://github.com/tensorflow/tensorflow
+cd mnt/data/tensorflow
+git clone https://github.com/tensorflow/models
+
+cd mnt/data/
+git clone https://github.com/cocodataset/cocoapi.git
+
+exec container
+
+cd /notebooks/cocoapi/PythonAPI
+make
+cp -r pycocotools /notebooks/tensorflow/models
+
+cd /notebooks/tensorflow/models/research
+protoc object_detection/protos/*.proto --python_out=.
 
