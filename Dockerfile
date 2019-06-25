@@ -71,8 +71,10 @@ COPY notebooks /notebooks
 
 # Port
 EXPOSE 8888
-EXPOSE 6006 
+EXPOSE 6006
 
+ENV PYTHONPATH=/usr/local/bin/python3.7:/notebooks/tensorflow/models/research/:/notebooks/tensorflow/models/research/slim
+# after clone git
 VOLUME /notebooks
 
 # Run Jupyter Notebook
