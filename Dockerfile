@@ -44,6 +44,7 @@ RUN pip --no-cache-dir install \
         librosa \
         Pillow \
         h5py \
+        jupyter-tensorboard \
         google-api-python-client \
         tornado==5.1.1 \
         Cython contextlib2 \
